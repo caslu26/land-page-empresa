@@ -1,21 +1,28 @@
 body {
-    background-color: #E9F0EC;
-    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     max-width: 100%;
     overflow-x: hidden; /* Isso impede que a página seja rolada horizontalmente */
 }
 
-header {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    background: #E9F0EC;
-    color: #2F4858;
-    margin: 0;
-    padding: 5px;
+main {
+    padding: 40px 20px;
 }
+section {
+    margin-bottom: 50px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
 
 header img {  
     margin-left: 9px;
@@ -26,9 +33,6 @@ header h3 {
     margin-right: 770px; /* Adicionei uma margem negativa para compensar a margem da imagem */
 }
 
-#imagem-azulada {
-    filter: hue-rotate(280deg); /* Adicionando um filtro de rotação de matiz para dar uma tonalidade azulada */
-}
 
 nav {
     display: inline-block;
@@ -60,37 +64,46 @@ nav a:hover {
     color: #2e83b8;
 }
 
-.btn {
+button {
+    background-color: #3A7CA5;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    background-color: white;
-    color: #2F4858;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    font-family: 'Helvetica', sans-serif;
-    padding: 5px;
-    align-items: center;
-    cursor: pointer;
+    border-radius: 5px;
 }
 
-.btn img {
-    display: inline;
-    vertical-align: middle; 
-    padding-left: 5px;
-    padding: 3px;
-    height: 23px;
-    width: 23px;
-    cursor: pointer;
+.btn, #btn2 {
+    border-radius: 5px;
+    padding: 10px 20px;
+    
 }
 
-#img-btn{
-    display: inline-block;
-    padding-left: 5px;
+
+#btn3 {
+    background-color: #3A7CA5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.btn:hover, #btn3:hover {
+    background-color: #2e83b8;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
     background-color: #2e83b8;
     color: #E9F0EC;
+}
+
+.btn:hover, #btn2:hover {
+    background-color: #2e83b8;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+   
 }
 
 .sobre {
@@ -109,6 +122,12 @@ h1, h2, h3 {
     color: #2F4858;
     margin-left: 35px;
     font-weight: bold;
+}
+
+.duvidas {
+    color: #2F4858;
+    margin-left: 35px;
+    
 }
 
 .infos h1{
@@ -221,9 +240,12 @@ h1, h2, h3 {
     flex-direction: column; /* Altera a direção dos elementos na segunda seção */
 }
 
-textarea {
-    margin-top: 7px; /* Espaçamento entre o select e o textarea */
-    border: none;
+input, textarea {
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .icon-form-container img {
@@ -272,9 +294,13 @@ a {
 
 }
 
-@media (max-width: 600px) {
-    .container {
+@media (max-width: 768px) {
+    header h3 {
+        margin-right: 0;
+    }
+    .projects {
         flex-direction: column;
         align-items: center;
     }
 }
+
