@@ -68,24 +68,18 @@
       <section class="form&help">
         <h1>Faça o seu orçamento </h1>
         <div class="container">
-          <form action="cadastro" method="POST" id="form-cad">
+          <form action="/cadastro" method="POST" id="form-cad">
             <div class="input-group">
-              <img
-                id="img-form"
-                src="img/icon-form.png"
-                alt="icon-do-form"
-                width="48"
-                height="48"
-              />
-              <input type="text" placeholder="Primeiro nome" />
-              <input type="text" placeholder="Ultimo nome" />
+                <img id="img-form" src="img/icon-form.png" alt="icon-do-form" width="48" height="48"/>
+                <input type="text" name="primeiro_nome" placeholder="Primeiro nome" required/>
+                <input type="text" name="ultimo_nome" placeholder="Ultimo nome" required/>
             </div>
             <div class="input-group">
-              <input type="text" placeholder="Email" />
-              <input type="text" placeholder="Telefone" />
-              <button onclick="" id="btn3">enviar</button>
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="text" name="telefone" placeholder="Telefone" required/>
+                <button type="submit" id="btn3">Enviar</button>
             </div>
-          </form>
+        </form>
         </div>
       </section>
       <br /><br /><br /><br />
@@ -97,21 +91,16 @@
         <div class="icon-form-container">
           <img src="img/icon-help.png" alt="" height="48" width="48" />
           <div class="form">
-            <select name="ajuda">
-              <option value="sugestao">Analises de BI</option>
-              <option value="sugestao">Landing Pages</option>
-              <option value="sugestao">Sistema de Gerenciamentos</option>
-            </select>
-            <textarea
-              name="message"
-              placeholder="Mensagem"
-              id="msg"
-              cols="90"
-              rows="15"
-            ></textarea
-            ><br /><br />
-            <button onclick="" id="btn2">enviar</button>
-          </div>
+            <form action="/ajuda" method="POST" id="form-help">
+                <select name="ajuda">
+                    <option value="bi">Analises de BI</option>
+                    <option value="landing_pages">Landing Pages</option>
+                    <option value="gerenciamento">Sistema de Gerenciamentos</option>
+                </select>
+                <textarea name="message" placeholder="Mensagem" id="msg" cols="90" rows="15"></textarea><br/><br/>
+                <button type="submit" id="btn2">Enviar</button>
+            </form>
+        </div>
         </div>
       </section>
     </main>

@@ -6,7 +6,7 @@ const path = require('path');
 const saltRounds = 10;
 
 const app = express();
-const port = 8005;
+const port = 5000;
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
@@ -23,13 +23,13 @@ const db = mysql.createPool({
 
 // conectando com banco 
 
-db.connect((err) => {
-    if (err) {
-        console.log("Erro ao conectar ao banco de dados",err);
-    }else {
-        console.log("Conectado ao banco de dados com sucesso");
-    }
-});
+//db.connect((err) => {
+//    if (err) {
+//        console.log("Erro ao conectar ao banco de dados",err);
+//    }else {
+//        console.log("Conectado ao banco de dados com sucesso");
+//    }
+//});
 
 //Rota para o envio do formulario
 
